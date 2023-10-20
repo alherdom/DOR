@@ -1,12 +1,13 @@
-#blue {
-    background-color: blue;
+#red {
+    background-color: red;
     height: 500px;
     width: 20%;
 }
 
 #green {
-    background-color: green;
+    background-color: limegreen;
 }
+
 #pink {
     background-color: rgb(251, 0, 255);
     height: 40px;
@@ -15,4 +16,9 @@
 
 #orange {
     background-color: orange;
+    height: 100px;
+}
+
+#blue {
+    background-color: blue;
 }
