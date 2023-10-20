@@ -1,11 +1,14 @@
 #blue {
+    border: 2px solid white;
     background-color: blue;
 }
 
 #green {
+    border: 2px solid white;
     background-color: green;
 }
 
 #red {
+    border: 2px solid white;
     background-color: red;
 }

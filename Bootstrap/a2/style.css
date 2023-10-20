@@ -1,24 +1,45 @@
-#red {
-    background-color: red;
-    height: 500px;
-    width: 20%;
+.red {
+    height: auto;
+    align-content: center;
+    background-color: lightcoral;
+    border: 2px solid white;
+
 }
 
-#green {
-    background-color: limegreen;
+.green {
+    height: 50px;
+    background-color: lightgreen;
+    border: 2px solid white;
+
 }
 
-#pink {
-    background-color: rgb(251, 0, 255);
-    height: 40px;
+.pink {
+    height: 50px;
+    background-color: lightpink;
     width: 80%;
+    border: 2px solid white;
+
 }
 
-#orange {
-    background-color: orange;
+.orange {
+    height: 200px;
+    background-color: lightsalmon;
+    border: 2px solid white;
+
+}
+
+.blue {
     height: 100px;
+    background-color: lightskyblue;
+    border: 2px solid white;
 }
 
-#blue {
-    background-color: blue;
+@media (max-width: 570px) {
+    .red {
+        height: 100px;
+    }
+
+    .orange {
+        height: 150px;
+    }
 }
