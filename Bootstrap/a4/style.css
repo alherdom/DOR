@@ -1,0 +1,62 @@
+.red {
+    height: 250px;
+    align-content: center;
+    background-color: lightcoral;
+    border: 8px solid white;
+    font-size: 40px;
+
+}
+
+.green {
+    height: 50px;
+    background-color: lightgreen;
+    border: 8px solid white;
+
+}
+
+.pink {
+    height: 50px;
+    background-color: lightpink;
+    width: 80%;
+    border: 8px solid white;
+
+}
+
+.orange {
+    height: 100px;
+    background-color: lightsalmon;
+    border: 8px solid white;
+}
+
+.yellow {
+    background-color: #ffff77;
+    border: 8px solid white;
+}
+
+.blue {
+    height: 100px;
+    background-color: lightskyblue;
+    border: 8px solid white;
+}
+
+.grey {
+    height: 100px;
+    background-color: lightgray;
+    border: 8px solid white;
+}
+
+.turquoise {
+    height: 50px;
+    background-color: turquoise;
+    border: 8px solid white;
+}
+
+.foot {
+    height: auto;
+}
+
+@media (max-width: 570px) {
+    .hidden {
+        display: none;
+    }
+}
