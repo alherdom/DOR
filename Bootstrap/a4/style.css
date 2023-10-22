@@ -1,10 +1,8 @@
 .red {
-    height: 250px;
-    align-content: center;
+    height: 350px;
     background-color: lightcoral;
     border: 8px solid white;
-    font-size: 40px;
-
+    font-size: 80px;
 }
 
 .green {
@@ -55,8 +53,58 @@
     height: auto;
 }
 
+.endText {
+    text-align: end;
+}
+
+@media (max-width: 768px) {
+    .red3 {
+        height: auto;
+        background-color: lightgreen;
+    }
+
+    .centerText {
+        text-align: center;
+    }
+
+    .red1 {
+        height: 250px;
+        padding-top: 70px;
+        text-align: start;
+    }
+
+    .red2 {
+        height: 250px;
+        padding-top: 70px;
+        text-align: end;
+    }
+
+    .green {
+        background-color: turquoise;
+    }
+}
+
 @media (max-width: 570px) {
-    .hidden {
-        display: none;
+    .green {
+        height: auto;
+        background-color: lightpink;
+    }
+
+    .red1 {
+        padding-top: 0px;
+        height: auto;
+    }
+
+    .red2 {
+        padding-top: 0px;
+        height: auto;
+        text-align: center;
+        background-color: turquoise;
+    }
+
+    .red3 {
+        height: auto;
+        background-color: lightcoral;
+        padding-left: 450px;
     }
 }
