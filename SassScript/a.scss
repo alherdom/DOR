@@ -1,0 +1,7 @@
+$link-color: #333;
+$link-bg-color: #fff;
+$color: "color";
+.link {
+#{$color}: #{$link-color};
+background-#{$color}: #{$link-bg-color};
+}
