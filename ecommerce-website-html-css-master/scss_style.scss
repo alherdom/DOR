@@ -31,6 +31,10 @@ $background-color_13: #d1d0d0;
 $background-color_14: #ececec;
 
 @import "https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import "header.scss";
+@import "banner.scss";
+@import "footer.scss";
+
 /* global styles */
 
 * {
@@ -39,36 +43,44 @@ $background-color_14: #ececec;
 	box-sizing: border-box;
 	font-family: $font-family_1;
 }
+
 h1 {
 	font-size: 50px;
 	line-height: 64px;
 	color: $color_1;
 }
+
 h2 {
 	font-size: 46px;
 	line-height: 54px;
 	color: $color_1;
 }
+
 h4 {
 	font-size: 20px;
 	color: $color_1;
 	color: $color_11;
 }
+
 h6 {
 	font-weight: 700;
 	font-size: 12px;
 }
+
 p {
 	font-size: 16px;
 	color: $color_2;
 	margin: 15px 0 20px 0;
 }
+
 .section-p1 {
 	padding: 40px 0;
 }
+
 .section-m1 {
 	margin: 40px 0;
 }
+
 button.normal {
 	font-size: 14px;
 	font-weight: 600px;
@@ -80,92 +92,17 @@ button.normal {
 	border: none;
 	outline: none;
 	transition: 0.2s;
+
 	&:hover {
 		background-color: $background-color_2;
 		color: $color_4;
 	}
 }
+
 body {
 	width: 100%;
 }
-#header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background-color: $background-color_3;
-	padding: 20px 80px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-	z-index: 999;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-}
-.header-list {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.header-list-nav {
-	ul {
-		display: flex;
-		li {
-			list-style-type: none;
-			padding: 0 20px;
-			position: relative;
-			a {
-				&:hover {
-					&::after {
-						content: "";
-						width: 30%;
-						height: 2px;
-						background: #088178;
-						position: absolute;
-						bottom: -4px;
-						left: 20px;
-					}
-				}
-			}
-			a.active {
-				&::after {
-					content: "";
-					width: 30%;
-					height: 2px;
-					background: #088178;
-					position: absolute;
-					bottom: -4px;
-					left: 20px;
-				}
-			}
-		}
-		a {
-			text-decoration: none;
-			font-size: 16px;
-			font-weight: 600;
-			color: $color_5;
-			transition: 0.3s ease;
-			&:hover {
-				color: $color_6;
-				content: "";
-			}
-		}
-		a.active {
-			color: $color_6;
-			content: "";
-			color: $color_6;
-		}
-	}
-}
-.header-list-icon {
-	a {
-		color: $color_5;
-		padding-left: 20px;
-		transition: 0.3s ease;
-		&:hover {
-			color: $color_6;
-		}
-	}
-}
+
 #hero {
 	background-image: url(images/hero4.png);
 	width: 100%;
@@ -176,17 +113,21 @@ body {
 	align-items: flex-start;
 	justify-content: center;
 	padding: 0 80px;
+
 	h4 {
 		padding-bottom: 15px;
 		font-size: 40px;
 	}
+
 	h2 {
 		font-size: 70px;
 	}
+
 	h1 {
 		color: $color_6;
 		font-size: 70px;
 	}
+
 	button {
 		background-color: $background-color_4;
 		background-image: url(images/button.png);
@@ -202,10 +143,12 @@ body {
 		padding: 14px 65px 14px 65px;
 	}
 }
+
 #features {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+
 	.f-box {
 		width: 180px;
 		text-align: center;
@@ -215,13 +158,16 @@ body {
 		border-radius: 4px;
 		margin: 15px 0;
 		transition: box-shadow 0.3s;
+
 		&:hover {
 			box-shadow: 10px 10px 54px rgba(0, 0, 0, 0.1);
 		}
+
 		img {
 			width: 100%;
 			margin-bottom: 10px;
 		}
+
 		h6 {
 			display: inline-block;
 			padding: 9px 8px 6px 8px;
@@ -231,26 +177,31 @@ body {
 			color: $color_6;
 			background-color: $background-color_5;
 		}
+
 		&:nth-child(2) {
 			h6 {
 				background-color: $background-color_6;
 			}
 		}
+
 		&:nth-child(3) {
 			h6 {
 				background-color: $background-color_7;
 			}
 		}
+
 		&:nth-child(4) {
 			h6 {
 				background-color: $background-color_8;
 			}
 		}
+
 		&:nth-child(5) {
 			h6 {
 				background-color: $background-color_9;
 			}
 		}
+
 		&:nth-child(6) {
 			h6 {
 				background-color: $background-color_10;
@@ -258,6 +209,7 @@ body {
 		}
 	}
 }
+
 .product-section {
 	.pro-collection {
 		display: flex;
@@ -265,12 +217,15 @@ body {
 		justify-content: space-around;
 		margin: 0 60px;
 	}
+
 	h1 {
 		text-align: center;
 	}
+
 	p {
 		text-align: center;
 	}
+
 	.product-cart {
 		width: 280px;
 		border: 1px solid #ebebeb;
@@ -280,30 +235,37 @@ body {
 		position: relative;
 		box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
 		transition: box-shadow 0.2s;
+
 		&:hover {
 			box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
 		}
+
 		img {
 			width: 100%;
 			border-radius: 25px;
 		}
+
 		span {
 			color: $color_7;
 			font-weight: 500;
 			line-height: 30px;
 		}
+
 		h4 {
 			font-size: 18px;
 			color: $color_8;
 		}
+
 		.stars {
 			color: $color_9;
 			padding: 6px 0;
 		}
+
 		.price {
 			color: $color_6;
 			padding: 4px 0;
 		}
+
 		.buy-icon {
 			color: $color_6;
 			background-color: $background-color_11;
@@ -315,103 +277,11 @@ body {
 		}
 	}
 }
-#off-banner {
-	background-image: url(images/banner/b2.jpg);
-	background-size: cover;
-	width: 100%;
-	height: 40vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	h4 {
-		color: $color_10;
-	}
-	h2 {
-		color: $color_10;
-		padding: 20px 0;
-	}
-}
-#banners {
-	margin: 0 60px;
-	h2 {
-		color: $color_11;
-	}
-	.big-banners {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		div {
-			min-width: 580px;
-			margin: 15px;
-			height: 300px;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: center;
-			padding: 25px;
-			background-size: cover;
-			backdrop-filter: blur(8%);
-			&:hover {
-				button {
-					background-color: $background-color_2;
-					border: 1px solid #088178;
-				}
-			}
-		}
-		button {
-			margin-top: 20px;
-			padding: 12px 20px;
-			font-size: 16px;
-			font-weight: 500;
-			background-color: $background-color_4;
-			color: $color_11;
-			border: 1px solid rgb(248, 248, 248);
-			cursor: pointer;
-			transition: 0.3s ease;
-		}
-	}
-	.big-banners-1 {
-		background-image: url(images/banner/b17.jpg);
-	}
-	.big-banners-2 {
-		background-image: url(images/banner/b10.jpg);
-	}
-	.small-banners-1 {
-		background-image: url(images/banner/b7.jpg);
-	}
-	.small-banners-2 {
-		background-image: url(images/banner/b4.jpg);
-	}
-	.small-banners-3 {
-		background-image: url(images/banner/b18.jpg);
-	}
-	.small-banners {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		div {
-			min-width: 370px;
-			height: 200px;
-			margin: 15px;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: center;
-			padding: 25px;
-			background-size: cover;
-		}
-		h2 {
-			font-size: 25px;
-		}
-		h5 {
-			color: $color_12;
-		}
-	}
-}
+
 span {
 	color: $color_11;
 }
+
 #newsletter {
 	background-image: url(images/banner/b14.png);
 	background-repeat: no-repeat;
@@ -422,20 +292,24 @@ span {
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 75px;
+
 	.newsletter-text {
 		h3 {
 			color: $color_13;
 			font-size: 30px;
 			padding: 0 0 15px 0;
 		}
+
 		h5 {
 			color: $color_14;
 			font-size: 17px;
+
 			span {
 				color: $color_15;
 			}
 		}
 	}
+
 	.form {
 		input {
 			padding: 20px;
@@ -449,6 +323,7 @@ span {
 			margin-right: -4px;
 			margin-top: 1px;
 		}
+
 		button {
 			margin-left: 0;
 			padding: 20px;
@@ -459,42 +334,6 @@ span {
 			font-size: 17px;
 			border-radius: 0 6px 6px 0;
 			cursor: pointer;
-		}
-	}
-}
-#footer {
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
-	padding: 75px;
-	background-color: $background-color_14;
-	p {
-		color: $color_16;
-		text-decoration: none;
-	}
-	a {
-		color: $color_16;
-		text-decoration: none;
-		&:hover {
-			color: $color_6;
-		}
-	}
-	.about {
-		a {
-			display: block;
-			padding: 8px 0;
-		}
-	}
-	.myaccount {
-		a {
-			display: block;
-			padding: 8px 0;
-		}
-	}
-	.download {
-		img {
-			border: 1px solid #08817969;
-			border-radius: 7px;
 		}
 	}
 }

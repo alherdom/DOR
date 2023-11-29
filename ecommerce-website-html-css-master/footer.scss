@@ -1,0 +1,40 @@
+#footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 75px;
+    background-color: $background-color_14;
+
+    p {
+        color: $color_16;
+        text-decoration: none;
+    }
+
+    a {
+        @extend p;
+
+        &:hover {
+            color: $color_6;
+        }
+    }
+
+    .about {
+        a {
+            display: block;
+            padding: 8px 0;
+        }
+    }
+
+    .myaccount {
+        a {
+            @extend a;
+        }
+    }
+
+    .download {
+        img {
+            border: 1px solid #08817969;
+            border-radius: 7px;
+        }
+    }
+}

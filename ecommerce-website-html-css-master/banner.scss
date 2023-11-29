@@ -1,0 +1,111 @@
+#off-banner {
+    background-image: url(images/banner/b2.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h4 {
+        color: $color_10;
+    }
+
+    h2 {
+        color: $color_10;
+        padding: 20px 0;
+    }
+}
+
+#banners {
+    margin: 0 60px;
+
+    h2 {
+        color: $color_11;
+    }
+
+    .big-banners {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        div {
+            min-width: 580px;
+            margin: 15px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 25px;
+            background-size: cover;
+            backdrop-filter: blur(8%);
+
+            &:hover {
+                button {
+                    background-color: $background-color_2;
+                    border: 1px solid #088178;
+                }
+            }
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: $background-color_4;
+            color: $color_11;
+            border: 1px solid rgb(248, 248, 248);
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+    }
+
+    .big-banners-1 {
+        background-image: url(images/banner/b17.jpg);
+    }
+
+    .big-banners-2 {
+        background-image: url(images/banner/b10.jpg);
+    }
+
+    .small-banners-1 {
+        background-image: url(images/banner/b7.jpg);
+    }
+
+    .small-banners-2 {
+        background-image: url(images/banner/b4.jpg);
+    }
+
+    .small-banners-3 {
+        background-image: url(images/banner/b18.jpg);
+    }
+
+    .small-banners {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        div {
+            min-width: 370px;
+            height: 200px;
+            margin: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 25px;
+            background-size: cover;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+
+        h5 {
+            color: $color_12;
+        }
+    }
+}
