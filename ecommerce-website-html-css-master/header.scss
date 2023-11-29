@@ -43,7 +43,13 @@
 
             a.active {
                 &::after {
-                    @extend &::after;
+                    content: "";
+                    width: 30%;
+                    height: 2px;
+                    background: $background-color_2;
+                    position: absolute;
+                    bottom: -4px;
+                    left: 20px;
                 }
             }
         }

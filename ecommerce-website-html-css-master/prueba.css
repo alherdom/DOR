@@ -27,7 +27,7 @@
   padding: 0 20px;
   position: relative;
 }
-.header-list-nav ul li a:hover::after {
+.header-list-nav ul li a:hover::after, .header-list-nav ul li #footer .myaccount a:hover::after, #footer .myaccount .header-list-nav ul li a:hover::after {
   content: "";
   width: 30%;
   height: 2px;
@@ -56,18 +56,18 @@
   color: #088178;
   content: "";
 }
-.header-list-nav ul a.active {
+.header-list-nav ul a.active, .header-list-nav ul #footer .myaccount a.active, #footer .myaccount .header-list-nav ul a.active {
   color: #088178;
   content: "";
   color: #088178;
 }
 
-.header-list-icon a {
+.header-list-icon a, .header-list-icon #footer .myaccount a, #footer .myaccount .header-list-icon a {
   color: #1a1a1a;
   padding-left: 20px;
   transition: 0.3s ease;
 }
-.header-list-icon a:hover {
+.header-list-icon a:hover, .header-list-icon #footer .myaccount a:hover, #footer .myaccount .header-list-icon a:hover {
   color: #088178;
 }
 
@@ -110,8 +110,7 @@
   justify-content: center;
   padding: 25px;
   background-size: cover;
-  -webkit-backdrop-filter: blur(8%);
-          backdrop-filter: blur(8%);
+  backdrop-filter: blur(8%);
 }
 #banners .big-banners div:hover button {
   background-color: #088178;
@@ -177,18 +176,10 @@
   color: rgb(109, 109, 109);
   text-decoration: none;
 }
-#footer a {
-  color: rgb(109, 109, 109);
-  text-decoration: none;
-}
 #footer a:hover {
   color: #088178;
 }
 #footer .about a {
-  display: block;
-  padding: 8px 0;
-}
-#footer .myaccount a {
   display: block;
   padding: 8px 0;
 }
@@ -452,4 +443,4 @@ span {
   font-size: 17px;
   border-radius: 0 6px 6px 0;
   cursor: pointer;
-}/*# sourceMappingURL=scss_style.css.map */
+}

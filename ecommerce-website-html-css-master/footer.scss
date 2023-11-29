@@ -5,9 +5,28 @@
     padding: 75px;
     background-color: $background-color_14;
 
+    $type: monster;
+
     p {
-        color: $color_16;
-        text-decoration: none;
+        @if $type ==ocean {
+            color: blue;
+            text-decoration: none;
+        }
+
+        @else if $type ==matador {
+            color: red;
+            text-decoration: none;
+        }
+
+        @else if $type ==monster {
+            color: $color_16;
+            text-decoration: none;
+        }
+
+        @else {
+            color: black;
+            text-decoration: none;
+        }
     }
 
     a {

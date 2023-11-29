@@ -13,7 +13,7 @@
     }
 
     h2 {
-        color: $color_10;
+        @extend h4;
         padding: 20px 0;
     }
 }
@@ -62,6 +62,27 @@
             transition: 0.3s ease;
         }
     }
+
+    // @each $animal in puma, sea-slug, egret, salamander {
+    //     .#{$animal}-icon {
+    //       background-image: url('/images/#{$animal}.png');
+    //     }
+    //   }
+      
+    //   El código Sass anterior se compila de la siguiente manera:
+      
+    //   .puma-icon {
+    //     background-image: url('/images/puma.png');
+    //   }
+    //   .sea-slug-icon {
+    //     background-image: url('/images/sea-slug.png');
+    //   }
+    //   .egret-icon {
+    //     background-image: url('/images/egret.png');
+    //   }
+    //   .salamander-icon {
+    //     background-image: url('/images/salamander.png');
+    //   }
 
     .big-banners-1 {
         background-image: url(images/banner/b17.jpg);
