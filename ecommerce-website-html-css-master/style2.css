@@ -353,7 +353,6 @@ body {
   justify-content: center;
   padding: 25px;
   background-size: cover;
-  -webkit-backdrop-filter: blur(8%);
   backdrop-filter: blur(8%);
 }
 
