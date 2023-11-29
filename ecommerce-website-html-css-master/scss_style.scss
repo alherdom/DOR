@@ -30,6 +30,28 @@ $background-color_12: #041e42;
 $background-color_13: #d1d0d0;
 $background-color_14: #ececec;
 
+@mixin box-shadow($color) {
+	box-shadow: 20px 20px 30px $color;
+  }
+
+@mixin buttonStyles($text-color, $bg-color, $hover-bg-color, $hover-text-color) {
+	font-size: 14px;
+	font-weight: 600;
+	padding: 15px 30px;
+	color: #{$text-color};
+	background-color: #{$bg-color};
+	border-radius: 4px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	transition: 0.2s;
+  
+	&:hover {
+	  background-color: #{$hover-bg-color};
+	  color: #{$hover-text-color};
+	}
+}
+
 @import "https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap";
 @import "header.scss";
 @import "banner.scss";
@@ -37,9 +59,13 @@ $background-color_14: #ececec;
 
 /* global styles */
 
+$use-wide-margin: false;
+$normal-margin: 0;
+$wide-margin: 20px;
+
 * {
-	margin: 0;
-	padding: 0;
+	margin: if($use-wide-margin, $wide-margin, $normal-margin);
+	padding: if($use-wide-margin, $wide-margin, $normal-margin);
 	box-sizing: border-box;
 	font-family: $font-family_1;
 }
@@ -82,21 +108,7 @@ p {
 }
 
 button.normal {
-	font-size: 14px;
-	font-weight: 600px;
-	padding: 15px 30px;
-	color: $color_3;
-	background-color: $background-color_1;
-	border-radius: 4px;
-	cursor: pointer;
-	border: none;
-	outline: none;
-	transition: 0.2s;
-
-	&:hover {
-		background-color: $background-color_2;
-		color: $color_4;
-	}
+	@include buttonStyles($color_3, $background-color_1, $background-color_2, $color_4);
 }
 
 body {
@@ -178,35 +190,14 @@ body {
 			background-color: $background-color_5;
 		}
 
-		&:nth-child(2) {
-			h6 {
-				background-color: $background-color_6;
+		@for $i from 2 through 6 {
+			&:nth-child(#{$i}) {
+			  h6 {
+				$color-var-name: "background-color_" + ($i + 4);
+				background-color: #{$color-var-name};
+			  }
 			}
-		}
-
-		&:nth-child(3) {
-			h6 {
-				background-color: $background-color_7;
-			}
-		}
-
-		&:nth-child(4) {
-			h6 {
-				background-color: $background-color_8;
-			}
-		}
-
-		&:nth-child(5) {
-			h6 {
-				background-color: $background-color_9;
-			}
-		}
-
-		&:nth-child(6) {
-			h6 {
-				background-color: $background-color_10;
-			}
-		}
+		  }
 	}
 }
 
@@ -233,11 +224,11 @@ body {
 		margin-bottom: 30px;
 		border-radius: 25px;
 		position: relative;
-		box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+		@include box-shadow( rgba(0, 0, 0, 0.02));
 		transition: box-shadow 0.2s;
 
 		&:hover {
-			box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+			@include box-shadow( rgba(0, 0, 0, 0.06));
 		}
 
 		img {
@@ -311,8 +302,12 @@ span {
 	}
 
 	.form {
-		input {
+		@each $element in input, button {
+		  #{$element} {
 			padding: 20px;
+		  }
+	  
+		  @if $element == input {
 			width: 350px;
 			height: 56px;
 			background-color: $background-color_13;
@@ -322,18 +317,17 @@ span {
 			outline: none;
 			margin-right: -4px;
 			margin-top: 1px;
-		}
-
-		button {
+		  }
+	  
+		  @else if $element == button {
 			margin-left: 0;
-			padding: 20px;
-			border: none;
 			width: 120px;
 			background-color: $background-color_2;
 			color: $color_13;
 			font-size: 17px;
 			border-radius: 0 6px 6px 0;
 			cursor: pointer;
+		  }
 		}
 	}
 }

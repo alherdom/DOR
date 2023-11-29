@@ -1,9 +1,9 @@
 @import "https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap";
 #header {
+  background-color: #e3e6f3;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #e3e6f3;
   padding: 20px 80px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   z-index: 999;
@@ -36,7 +36,7 @@
   bottom: -4px;
   left: 20px;
 }
-.header-list-nav ul li a.active::after {
+.header-list-nav ul li a.active::after, .header-list-nav ul li #footer .myaccount a.active::after, #footer .myaccount .header-list-nav ul li a.active::after {
   content: "";
   width: 30%;
   height: 2px;
@@ -45,14 +45,14 @@
   bottom: -4px;
   left: 20px;
 }
-.header-list-nav ul a {
+.header-list-nav ul a, .header-list-nav ul #footer .myaccount a, #footer .myaccount .header-list-nav ul a {
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
   color: #1a1a1a;
   transition: 0.3s ease;
 }
-.header-list-nav ul a:hover {
+.header-list-nav ul a:hover, .header-list-nav ul #footer .myaccount a:hover, #footer .myaccount .header-list-nav ul a:hover {
   color: #088178;
   content: "";
 }
@@ -81,11 +81,10 @@
   justify-content: center;
   flex-direction: column;
 }
-#off-banner h4 {
+#off-banner h4, #off-banner h2 {
   color: #eaebf0;
 }
 #off-banner h2 {
-  color: #eaebf0;
   padding: 20px 0;
 }
 
@@ -110,7 +109,8 @@
   justify-content: center;
   padding: 25px;
   background-size: cover;
-  backdrop-filter: blur(8%);
+  -webkit-backdrop-filter: blur(8%);
+          backdrop-filter: blur(8%);
 }
 #banners .big-banners div:hover button {
   background-color: #088178;
@@ -172,7 +172,7 @@
   padding: 75px;
   background-color: #ececec;
 }
-#footer p {
+#footer p, #footer a, #footer .myaccount a {
   color: rgb(109, 109, 109);
   text-decoration: none;
 }
@@ -208,7 +208,7 @@ h2 {
   color: #222;
 }
 
-h4 {
+h4, #off-banner h2 {
   font-size: 20px;
   color: #222;
   color: rgb(248, 248, 248);
@@ -219,7 +219,7 @@ h6 {
   font-size: 12px;
 }
 
-p {
+p, #footer a, #footer .myaccount a {
   font-size: 16px;
   color: #465b52;
   margin: 15px 0 20px 0;
@@ -235,7 +235,7 @@ p {
 
 button.normal {
   font-size: 14px;
-  font-weight: 600px;
+  font-weight: 600;
   padding: 15px 30px;
   color: #000;
   background-color: #fff;
@@ -265,7 +265,7 @@ body {
   justify-content: center;
   padding: 0 80px;
 }
-#hero h4 {
+#hero h4, #hero #off-banner h2, #off-banner #hero h2 {
   padding-bottom: 15px;
   font-size: 40px;
 }
@@ -323,19 +323,19 @@ body {
   background-color: #fddde4;
 }
 #features .f-box:nth-child(2) h6 {
-  background-color: #cdebbc;
+  background-color: background-color_6;
 }
 #features .f-box:nth-child(3) h6 {
-  background-color: #d1e8f2;
+  background-color: background-color_7;
 }
 #features .f-box:nth-child(4) h6 {
-  background-color: #cdd4f8;
+  background-color: background-color_8;
 }
 #features .f-box:nth-child(5) h6 {
-  background-color: #f6dbf6;
+  background-color: background-color_9;
 }
 #features .f-box:nth-child(6) h6 {
-  background-color: #fff2e5;
+  background-color: background-color_10;
 }
 
 .product-section .pro-collection {
@@ -347,7 +347,7 @@ body {
 .product-section h1 {
   text-align: center;
 }
-.product-section p {
+.product-section p, .product-section #footer a, #footer .product-section a {
   text-align: center;
 }
 .product-section .product-cart {
@@ -372,7 +372,7 @@ body {
   font-weight: 500;
   line-height: 30px;
 }
-.product-section .product-cart h4 {
+.product-section .product-cart h4, .product-section .product-cart #off-banner h2, #off-banner .product-section .product-cart h2 {
   font-size: 18px;
   color: rgb(41, 41, 41);
 }
@@ -421,8 +421,7 @@ span {
 #newsletter .newsletter-text h5 span {
   color: rgb(216, 182, 29);
 }
-#newsletter .form input {
-  padding: 20px;
+#newsletter .form {
   width: 350px;
   height: 56px;
   background-color: #d1d0d0;
@@ -432,11 +431,7 @@ span {
   outline: none;
   margin-right: -4px;
   margin-top: 1px;
-}
-#newsletter .form button {
   margin-left: 0;
-  padding: 20px;
-  border: none;
   width: 120px;
   background-color: #088178;
   color: white;
@@ -444,3 +439,9 @@ span {
   border-radius: 0 6px 6px 0;
   cursor: pointer;
 }
+#newsletter .form input {
+  padding: 20px;
+}
+#newsletter .form button {
+  padding: 20px;
+}/*# sourceMappingURL=scss_style.css.map */
