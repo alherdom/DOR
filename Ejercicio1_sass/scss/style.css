@@ -1,0 +1,114 @@
+@charset "UTF-8";
+body {
+  font-family: "Arial", sans-serif;
+}
+
+/*Estructura de anidamiento para la figura (cards)*/
+/*Estilos para el contenedor general de mi página*/
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*Usando anidamiento crear la hoja de estilos para un menú */
+nav {
+  background-color: #b04c99;
+  padding: 0.2rem;
+}
+nav ul li:nth-child(1) {
+  display: inline-block;
+  padding: 0 1rem;
+}
+nav ul li:nth-child(1).active {
+  color: #ffffff;
+  font-weight: bold;
+}
+nav ul li:nth-child(1):hover {
+  color: #ffffff;
+}
+nav ul li:nth-child(1) a {
+  text-decoration: none;
+}
+nav ul li:nth-child(2) {
+  display: inline-block;
+  padding: 0 1rem;
+  color: red;
+}
+nav ul li:nth-child(2).active {
+  color: #ffffff;
+  font-weight: bold;
+}
+nav ul li:nth-child(2):hover {
+  color: #ffffff;
+}
+nav ul li:nth-child(2) a {
+  text-decoration: none;
+}
+nav ul li:nth-child(3) {
+  display: inline-block;
+  padding: 0 1rem;
+}
+nav ul li:nth-child(3).active {
+  color: #ffffff;
+  font-weight: bold;
+}
+nav ul li:nth-child(3):hover {
+  color: #ffffff;
+}
+nav ul li:nth-child(3) a {
+  text-decoration: none;
+}
+nav ul li:nth-child(4) {
+  display: inline-block;
+  padding: 0 1rem;
+}
+nav ul li:nth-child(4).active {
+  color: #ffffff;
+  font-weight: bold;
+}
+nav ul li:nth-child(4):hover {
+  color: #ffffff;
+}
+nav ul li:nth-child(4) a {
+  text-decoration: none;
+}
+
+figure.card, figure.another-card, figure.card-extended {
+  border: 0.1rem solid #000000;
+  border-radius: 1rem;
+  display: inline-block;
+  padding: 1rem;
+  width: 25%;
+}
+figure.card img, figure.another-card img, figure.card-extended img {
+  border-radius: 25px;
+  width: 100%;
+}
+figure.card figcaption, figure.another-card figcaption, figure.card-extended figcaption {
+  font-size: 0.8rem;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.card-extended {
+  border-color: blue;
+}
+
+.another-card {
+  background-color: yellow;
+}
+.another-card img {
+  border-radius: 10px;
+}
+
+.colored-element {
+  background-color: #e74c3c;
+}
+
+.colored-element {
+  background-color: #3498db;
+}
+
+.colored-element {
+  background-color: #2ecc71;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,24 @@
+/*Estructura de anidamiento para la figura (cards)*/
+@mixin border-styles {
+    border: $border-width $border-style $border-color;
+    border-radius: $border-radius;
+}
+
+@mixin card-styles {
+    @include border-styles;
+    display: inline-block;
+    padding: 1rem;
+
+    width: $figure-width;
+
+    img {
+        border-radius: 25px;
+        width: 100%;
+    }
+
+    figcaption {
+        font-size: 0.8rem;
+        margin: 0.5rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,72 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+@import 'variables.scss';
+@import 'mixins.scss';
+
+/*Estilos para el contenedor general de mi página*/
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*Usando anidamiento crear la hoja de estilos para un menú */
+nav {
+    background-color: $navbar-background-color;
+    padding: 0.2rem;
+
+    ul {
+        $menu-items: 4;
+
+        @for $i from 1 through $menu-items {
+            li:nth-child(#{$i}) {
+                display: inline-block;
+                padding: 0 1rem;
+
+                @if $i ==2 {
+                    color: red;
+                }
+
+                &.active {
+                    color: $navbar-color-hover;
+                    font-weight: bold;
+                }
+
+                &:hover {
+                    color: $navbar-color-hover;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+figure.card {
+    @include card-styles;
+}
+
+.card-extended {
+    @extend .card;
+    border-color: blue;
+}
+
+.another-card {
+    @extend .card;
+    background-color: yellow;
+
+    img {
+        border-radius: 10px;
+    }
+}
+
+$background-colors: #e74c3c, #3498db, #2ecc71;
+
+@each $color in $background-colors {
+    .colored-element {
+        background-color: $color;
+    }
+}
