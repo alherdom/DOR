@@ -1,0 +1,245 @@
+/* define standard variables and values for website */
+$bgcolor: lightblue;
+$textcolor: darkblue;
+$fontsize: 18px;
+
+/* use the variables */
+body {
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-size: $fontsize;
+}
+
+/* define variables for the primary colors */
+$primary_1: #a2b9bc;
+$primary_2: #b2ad7f;
+$primary_3: #878f99;
+
+/* use the variables */
+.main-header {
+  background-color: $primary_1;
+}
+
+.menu-left {
+  background-color: $primary_2;
+}
+
+.menu-right {
+  background-color: $primary_3;
+}
+
+/* define variables */
+$myFont: Helvetica, sans-serif;
+$myColor: red;
+$myFontSize: 18px;
+$myWidth: 680px;
+
+body {
+  font-family: $myFont;
+  font-size: $myFontSize;
+  color: $myColor;
+}
+
+#container {
+  width: $myWidth;
+}
+
+/* variable scope */
+$myColor: red;
+
+h1 {
+  $myColor: green;
+  color: $myColor;
+}
+
+p {
+  color: $myColor; /* will be red */
+}
+
+/* variable global */
+$myColor: red;
+
+h1 {
+  $myColor: green !global;
+  color: $myColor;
+}
+
+p {
+  color: $myColor; /* will be green */
+}
+
+/* nested rules */
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+/* nested properties */
+// font: {
+//     family: Helvetica, sans-serif;
+//     size: 18px;
+//     weight: bold;
+//   }
+
+//   text: {
+//     align: center;
+//     transform: lowercase;
+//     overflow: hidden;
+//   }
+
+/* importing files */
+@import "variables"; /* _variables.scss */
+@import "mixins"; /* _mixins.scss */
+@import "reset"; /* _reset.scss */
+@import "typography"; /* _typography.scss */
+@import "colors"; /* _colors.scss */
+
+/* mixins */
+@mixin important-text {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+
+p {
+  @include important-text;
+}
+
+.danger {
+  @include important-text;
+  background-color: green;
+}
+
+@mixin special-text {
+  @include important-text;
+  @include link;
+  @include special-border;
+}
+
+/* define mixin with two arguments */
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
+
+.myArticle {
+  @include bordered(blue, 1px); // call mixin with two values
+}
+
+.myNotes {
+  @include bordered(red, 2px); // call mixin with two values
+}
+
+/* define mixin with default values */
+@mixin bordered($color: blue, $width: 1px) {
+  border: $width solid $color;
+}
+
+.myTips {
+  @include bordered(
+    $color: orange
+  ); // call mixin with one value and default value
+}
+
+/* extend directive */
+.button-basic {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-report {
+  @extend .button-basic;
+  background-color: red;
+}
+
+.button-submit {
+  @extend .button-basic;
+  background-color: green;
+  color: white;
+}
+
+/* father selector */
+.container {
+  background-color: #f0f0f0;
+
+  .box {
+    padding: 10px;
+
+    &-big {
+      font-size: 20px;
+
+      &:hover {
+        background-color: #3498db;
+      }
+    }
+
+    &-small {
+      font-size: 12px;
+    }
+  }
+}
+
+/* if() function */
+$box-width: 200px;
+
+.box {
+  width: if($box-width > 100px, $box-width, 100px);
+}
+
+/* @if directive */
+$theme: dark;
+
+body {
+  @if $theme == light {
+    background-color: #fff;
+    color: #333;
+  } @else {
+    background-color: #333;
+    color: #fff;
+  }
+}
+
+/* @for directive */
+$colums: 3;
+
+.container {
+  @for $i from 1 through $colums {
+    .colums-#{$i} {
+      width: 100% / $colums * $i;
+    }
+  }
+}
+
+/* @each directive */
+$colors: red, green, blue;
+
+@each $color in $colors {
+  .box-#{$color} {
+    background-color: $color;
+  }
+}
+
+/* @while directive */
+$i: 1;
+
+@while $i < 5 {
+  .item-#{$i} {
+    opacity: 0.2 * $i;
+  }
+  $i: $i + 1;
+}
+
