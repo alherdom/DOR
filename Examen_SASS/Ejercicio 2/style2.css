@@ -1,0 +1,35 @@
+.miclase h1 {
+  color: blue;
+  font-size: 4rem;
+  filter: saturate(10%);
+}
+
+.miclase h2 {
+  color: blue;
+  font-size: 3rem;
+  filter: saturate(20%);
+}
+
+.miclase h3 {
+  color: blue;
+  font-size: 2rem;
+  filter: saturate(30%);
+}
+
+.miclase h4 {
+  color: blue;
+  font-size: 1rem;
+  filter: saturate(40%);
+}
+
+.miclase h5 {
+  color: blue;
+  font-size: 0rem;
+  filter: saturate(50%);
+}
+
+.miclase h6 {
+  color: blue;
+  font-size: -1rem;
+  filter: saturate(60%);
+}/*# sourceMappingURL=style2.css.map */

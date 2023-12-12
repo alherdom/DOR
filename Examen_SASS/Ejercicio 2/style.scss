@@ -1,0 +1,18 @@
+$nombre: miclase;
+
+@for $i from 1 through 6 {
+    .#{$nombre} h#{$i} {
+        color: blue;
+        font-size: 5rem - $i * 1rem;
+        filter: brightness($i * 10%);
+    }
+}
+
+// @mixin mimixin($nombre, $color, $tamaño, $porcentaje) {
+//   .#{$nombre} {
+//     color: $color;
+//     font-size: $tamaño;
+//     filter: brightness($porcentaje);
+// }
+
+// @include mimixin(miclase, #919b09, 5rem, 70);

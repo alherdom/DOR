@@ -1,0 +1,64 @@
+.relax {
+  background-image: url("../patrones/relax.png");
+  padding: 5px;
+}
+.relax article {
+  padding: 10px;
+  margin: 10px;
+  color: #93a8b7;
+  font-family: Verdana;
+  background-color: #93a8b7;
+  text-shadow: 2px 2px 2px black;
+}
+
+.contrast {
+  background-image: url("../patrones/contrast.png");
+  padding: 5px;
+}
+.contrast article {
+  padding: 10px;
+  margin: 10px;
+  color: #cccccc;
+  font-family: "Comic Sans MS";
+  background-color: rgba(204, 204, 204, 0);
+  text-shadow: 2px 2px 2px black;
+}
+
+.love {
+  background-image: url("../patrones/love.png");
+  padding: 5px;
+}
+.love article {
+  padding: 10px;
+  margin: 10px;
+  color: #f8afb2;
+  font-family: Gabriola;
+  background-color: #f8afb2;
+  text-shadow: 2px 2px 2px black;
+}
+
+.psico {
+  background-image: url("../patrones/psico.png");
+  padding: 5px;
+}
+.psico article {
+  padding: 10px;
+  margin: 10px;
+  color: #1b4d48;
+  font-family: "Arial Black";
+  background-color: #1b4d48;
+  text-shadow: 2px 2px 2px black;
+}
+
+.moderm {
+  background-image: url("../patrones/moderm.png");
+  padding: 5px;
+}
+.moderm article {
+  padding: 10px;
+  margin: 10px;
+  color: #fec87c;
+  font-family: Impact;
+  background-color: rgba(254, 200, 124, 0);
+  text-shadow: 2px 2px 2px black;
+}/*# sourceMappingURL=patrones.css.map */

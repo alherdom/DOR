@@ -1,0 +1,35 @@
+.miclase h1 {
+  color: blue;
+  font-size: 4rem;
+  filter: brightness(10%);
+}
+
+.miclase h2 {
+  color: blue;
+  font-size: 3rem;
+  filter: brightness(20%);
+}
+
+.miclase h3 {
+  color: blue;
+  font-size: 2rem;
+  filter: brightness(30%);
+}
+
+.miclase h4 {
+  color: blue;
+  font-size: 1rem;
+  filter: brightness(40%);
+}
+
+.miclase h5 {
+  color: blue;
+  font-size: 0rem;
+  filter: brightness(50%);
+}
+
+.miclase h6 {
+  color: blue;
+  font-size: -1rem;
+  filter: brightness(60%);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,20 @@
+@each $nombre, $color, $opacidad, $fuente in
+(relax, #93a8b7, 60, Verdana),
+(contrast, #cccccc, -65),
+(love, #f8afb2, 30, Gabriola),
+(psico, #1b4d48, 30, "Arial Black"),
+(moderm, #fec87c, -20, Impact) {
+    .#{$nombre} {
+        background-image: url("../patrones/#{$nombre}.png");
+        padding: 5px;
+
+        & article {
+            padding: 10px;
+            margin: 10px;
+            color: $color;
+            font-family: if($fuente ==null, "Comic Sans MS", $fuente);
+            background-color: rgba($color, $opacidad);
+            text-shadow: 2px 2px 2px black;
+        }
+    }
+}

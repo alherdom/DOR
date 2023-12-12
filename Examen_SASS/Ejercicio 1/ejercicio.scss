@@ -1,0 +1,9 @@
+@each $nombre, $tamaño, $color, $bg-color in (intrepida, 11pt, red, lightgray),
+(clasica, 12pt, black, white),
+(inversa, 9pt, orange, silver) {
+    .tarjeta-#{$nombre} {
+        font-size: $tamaño;
+        color: $color;
+        background-color: $bg-color;
+    }
+}
