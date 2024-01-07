@@ -1,0 +1,46 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  img {
+    max-width: 100%;
+  }
+}
+
+.element {
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+}
+
+.element1 {
+  background-image: image-set(url('original_468.jpg') 1x,
+      url('original_600.jpg') 2x,
+      url('original_1024.jpg') 3x);
+}
+
+.element2 {
+  background-image: image-set(url('foto_468.png') 1x,
+      url('foto_600.png') 2x,
+      url('foto_1024.png') 3x);
+}
+
+.element3 {
+  background-image: image-set(url('foto_468.webp') 1x,
+      url('foto_600.webp') 2x,
+      url('foto_1024.webp') 3x);
+}
+
+.element4 {
+  background-image: image-set(url('foto_468.avif') 1x,
+      url('foto_600.avif') 2x,
+      url('foto_1024.avif') 3x);
+}

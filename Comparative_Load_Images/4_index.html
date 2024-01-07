@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Images</title>
+</head>
+
+<body>
+    <picture>
+        <source srcset="original_468.jpg 2x, original_468@2x.jpg 3x" media="(min-width: 468px)">
+        <source srcset="original_600.jpg 2x, original_600@2x.jpg 3x" media="(min-width: 600px)">
+        <source srcset="original_1024.jpg 2x, original_1024@2x.jpg 3x" media="(min-width: 1024px)">
+        <img src="original.jpg" srcset="original@2x.jpg 2x" alt="Image">
+    </picture>
+
+    <picture>
+        <source srcset="foto_468.png 2x, foto_468@2x.png 3x" media="(min-width: 468px)">
+        <source srcset="foto_600.png 2x, foto_600@2x.png 3x" media="(min-width: 600px)">
+        <source srcset="foto_1024.png 2x, foto_1024@2x.png 3x" media="(min-width: 1024px)">
+        <img src="foto.png" srcset="foto@2x.png 2x" alt="Image">
+    </picture>
+
+    <picture>
+        <source srcset="foto_468.webp 2x, foto_468@2x.webp 3x" media="(min-width: 468px)">
+        <source srcset="foto_600.webp 2x, foto_600@2x.webp 3x" media="(min-width: 600px)">
+        <source srcset="foto_1024.webp 2x, foto_1024@2x.webp 3x" media="(min-width: 1024px)">
+        <img src="foto.webp" srcset="foto@2x.webp 2x" alt="Image">
+    </picture>
+
+    <picture>
+        <source srcset="foto_468.avif 2x, foto_468@2x.avif 3x" media="(min-width: 468px)">
+        <source srcset="foto_600.avif 2x, foto_600@2x.avif 3x" media="(min-width: 600px)">
+        <source srcset="foto_1024.avif 2x, foto_1024@2x.avif 3x" media="(min-width: 1024px)">
+        <img src="foto.avif" srcset="foto@2x.avif 2x" alt="Image">
+    </picture>
+</body>
+
+</html>

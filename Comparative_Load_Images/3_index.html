@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Images</title>
+</head>
+
+<body>
+    <img data-src="original.jpg" src="miniatura_original.jpg">
+    <img data-src="foto.png" src="miniatura.png">
+    <img data-src="foto.webp" src="miniatura.webp">
+    <img data-src="foto.avif" src="miniatura.avif">
+
+    <script>
+        function init() {
+          var imgDefer = document.getElementsByTagName('img');
+          for (var i = 0; i < imgDefer.length; i++) {
+            if (imgDefer[i].getAttribute('data-src')) {
+              imgDefer[i].setAttribute('src', imgDefer[i].getAttribute('data-src'));
+            }
+          }
+        }
+        window.onload = init;
+      </script>
+
+</body>
+
+</html>
